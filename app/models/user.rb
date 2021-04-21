@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  has_many :articles
   # username must be present and unique, min 3 max 25
    validates :username, presence: true, 
                       uniqueness: { case_sensitive: false }, 
